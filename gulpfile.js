@@ -16,8 +16,8 @@ function scssTask() {
   return src("app/scss/style.scss", { sourcemaps: true })
     .pipe(sass())
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(dest("dist", { sourcemaps: "." }));
-    //.pipe(browsersync.stream()); // Inject changes without a full reload
+    .pipe(dest("dist", { sourcemaps: "." }))
+    .pipe(browsersync.stream()); // Inject changes without a full reload
 }
 
 // JavaScript Task
@@ -40,7 +40,7 @@ function browserSyncServe(cb) {
         bottom: "0",
       },
     },
-    files: ["dist/style.css"],
+    files: ["app/scss/**/*.scss", "app/scss/globals/*.scss", "app/scss/components/*.scss", "app/scss/utils/*.scss", "app/**/*.js"],
   });
   cb();
 }
@@ -53,8 +53,8 @@ function browserSyncReload(cb) {
 function watchTask() {
   watch("*.html", browserSyncReload);
   watch(
-    ["app/scss/**/*.scss", "app/**/*.js"],
-    series(scssTask, jsTask, browserSyncReload),
+    ["app/scss/**/*.scss", "app/scss/globals/*.scss", "app/scss/components/*.scss", "app/scss/utils/*.scss", "app/**/*.js"],
+    series(scssTask, jsTask), //, browserSyncReload
   );
 }
 
