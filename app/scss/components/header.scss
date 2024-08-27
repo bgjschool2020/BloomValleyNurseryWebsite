@@ -1,0 +1,26 @@
+@use '../util' as *;
+
+.header {
+  background-color: #BDD4DA; 
+
+  color: #014038;
+  padding: 15px 0;
+  text-align: center;
+  
+  @include breakpoint(large) {
+    display: flex;
+    justify-content:space-between;
+  }
+  
+  &__hamburger {
+    
+  }
+
+  &__logo {
+    
+  }
+  
+  &__title {
+    
+  }
+}

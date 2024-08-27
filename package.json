@@ -28,5 +28,8 @@
   "main": "vite.config.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "gulp-cache-bust": "^1.4.0"
+  }
 }
