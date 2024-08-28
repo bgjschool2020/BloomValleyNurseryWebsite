@@ -4,15 +4,16 @@
   background-color: #BDD4DA;
   color: #014038;
   padding: 15px 0;
-  margin-top: rem(36);
+  margin-top: rem(24);
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
   // for screens larger than medium
   @include breakpoint(medium) {
     display: flex;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -54,10 +55,11 @@
   }
 
 
-  // containers for small screen layouts
+  // containers for layouts
   &__left {
     display: flex;
     justify-content: flex-start;
+    flex: 1;
   }
 
   &__center {
@@ -67,10 +69,12 @@
     margin-bottom: rem(10);
     margin: 0 auto;
     text-align: center;
+    position: center;
   }
 
   &__right {
     display: flex;
     justify-content: flex-end;
+    flex: 1;
   }
 }
