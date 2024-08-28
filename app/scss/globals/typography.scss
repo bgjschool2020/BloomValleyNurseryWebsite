@@ -1,21 +1,53 @@
 @use '../util' as *;
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
   margin-top: 0;
-  
+
 }
 
 h1 {
   font-size: rem(24);
+  margin-bottom: rem(3);
+
   @include breakpoint(large) {
     font-size: rem(28);
   }
 }
 
-a, 
+a,
 a:visited,
 a:active {
   text-decoration: none;
 }
+
+.titleLarge {
+  font: var(--weight-titleLarge) var(--size-titleLarge) var(--font-titleLarge);
+  
+}
+
+.title {
+  font: var(--weight-title) var(--size-title) var(--font-title);
+}
+
+.subtitle {
+  font: var(--weight-subtitle) var(--size-subtitle) var(--font-subtitle);
+}
+
+.bodyLarge {
+  font: var(--weight-bodyLarge) var(--size-bodyLarge) var(--font-bodyLarge);
+}
+
+.bodyStrong {
+  font: var(--weight-bodyStrong) var(--size-bodyStrong) var(--font-bodyStrong);
+}
+
+.body {
+  font: var(--weight-body) var(--size-body) var(--font-body);
+}
+
+.captions {
+  font: var(--weight-captions) var(--size-captions) var(--font-captions);
+}
+

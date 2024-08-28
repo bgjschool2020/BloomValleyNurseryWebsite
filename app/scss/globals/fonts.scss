@@ -1,3 +1,38 @@
+@use '../util' as *;
+
 :root {
-  --font-calibri: 'Calibri', sans-serif;
+  /* Title Large */
+  --font-titleLarge: 'Arial', sans-serif;
+  --size-titleLarge: 30px;
+  --weight-titleLarge: bold;
+
+  /* Title */
+  --font-title: 'Arial', sans-serif;
+  --size-title: 25px;
+  --weight-title: normal;
+
+  /* Subtitle */
+  --font-subtitle: 'Comfortaa', sans-serif;
+  --size-subtitle: 15px;
+  --weight-subtitle: normal;
+
+  /* Body Large */
+  --font-bodyLarge: 'Calibri', sans-serif;
+  --size-bodyLarge: 20px;
+  --weight-bodyLarge: normal;
+
+  /* Body Strong */
+  --font-bodyStrong: 'Calibri', sans-serif;
+  --size-bodyStrong: 16px;
+  --weight-bodyStrong: bold;
+
+  /* Body */
+  --font-body: 'Calibri', sans-serif;
+  --size-body: 16px;
+  --weight-body: normal;
+
+  /* Captions */
+  --font-captions: 'Arial', sans-serif;
+  --size-captions: 11px;
+  --weight-captions: normal;
 }

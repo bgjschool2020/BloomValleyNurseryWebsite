@@ -1,26 +1,76 @@
 @use '../util' as *;
 
 .header {
-  background-color: #BDD4DA; 
-
+  background-color: #BDD4DA;
   color: #014038;
   padding: 15px 0;
-  text-align: center;
-  
-  @include breakpoint(large) {
+  margin-top: rem(36);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // for screens larger than medium
+  @include breakpoint(medium) {
     display: flex;
-    justify-content:space-between;
+    align-items: center;
   }
-  
+
+  // for mobile screens
+  @include breakpoint-down(small) {
+    padding: rem(10) 0;
+  }
+
   &__hamburger {
-    
+    display: flex;
+    align-items: center;
+    margin-left: rem(10);
   }
 
   &__logo {
-    
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
   }
-  
-  &__title {
-    
+
+  &__search,
+  &__shoppingcart,
+  &__account {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: auto;
+    margin-right: rem(10);
+  }
+
+  // Hide the search bar and profile icon on mobile
+  @include breakpoint-down(small) {
+
+    input[type="text"],
+    .header__account {
+      display: none;
+    }
+  }
+
+
+  // containers for small screen layouts
+  &__left {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: rem(10);
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  &__right {
+    display: flex;
+    justify-content: flex-end;
   }
 }

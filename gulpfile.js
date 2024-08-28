@@ -40,10 +40,10 @@ function browserSyncServe(cb) {
         bottom: "0",
       },
     },
-    files: ["app/scss/**/*.scss", "app/scss/globals/*.scss", "app/scss/components/*.scss", "app/scss/utils/*.scss", "app/**/*.js"],
   });
   cb();
 }
+
 function browserSyncReload(cb) {
   browsersync.reload();
   cb();
@@ -51,11 +51,11 @@ function browserSyncReload(cb) {
 
 // Watch Task
 function watchTask() {
-  watch("*.html", browserSyncReload);
-  watch(
-    ["app/scss/**/*.scss", "app/scss/globals/*.scss", "app/scss/components/*.scss", "app/scss/utils/*.scss", "app/**/*.js"],
-    series(scssTask, jsTask), //, browserSyncReload
-  );
+  watch("*.html", browserSyncReload); // Reloads on HTML changes
+
+  watch("app/scss/**/*.scss", series(scssTask)); // Injects CSS on changes
+
+  watch("app/**/*.js", series(jsTask, browserSyncReload)); // Rebuilds JS and reloads on changes
 }
 
 // Default Gulp Task
