@@ -2,11 +2,26 @@
 
 .footer {
   background-color: var(--sky-bloom);
-  
-  
+  color: var(--canopy-green);
+  padding: 15px 0;
+  margin-top: rem(24);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
   &__logo {
     display: flex;
     align-items: center;
     margin: 0 auto;
+  }
+
+  &__title {
+    margin-top: rem(10);
+  }
+
+  &__copywrite {
+    margin-top: rem(10);
   }
 }

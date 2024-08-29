@@ -1,0 +1,1 @@
+{"version":2,"languages":{"nodejs-npm":{"specfileHash":"000a40d9050d452c0d6f8f50258b2612","lockfileHash":"099928974c3c67dbb67ac139d59f19c0","guessedImports":["autoprefixer","gulp-babel","vite","cssnano","gulp","browser-sync","sass","gulp-terser","gulp-postcss","gulp-sass"],"guessedImportsHash":"dc8482dadff5d48218213953b82554db"}}}

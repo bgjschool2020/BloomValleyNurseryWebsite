@@ -15,10 +15,8 @@
     "browsersync": "^0.0.1-security",
     "cssnano": "^7.0.5",
     "dart-sass": "^1.25.0",
-    "gulp": "^5.0.0",
     "gulp-babel": "^8.0.0",
     "gulp-postcss": "^10.0.0",
-    "gulp-sass": "^5.1.0",
     "gulp-terser": "^2.1.0",
     "postcss": "^8.4.41",
     "sass": "^1.77.8",
@@ -30,6 +28,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "gulp-cache-bust": "^1.4.0"
+    "gulp": "^5.0.0",
+    "gulp-cache-bust": "^1.4.0",
+    "gulp-sass": "^5.1.0"
   }
 }
