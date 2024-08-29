@@ -8,52 +8,28 @@
     <link rel="stylesheet" href="/dist/style.css">
     <script defer src="/dist/script.js"></script>
     <script src="https://kit.fontawesome.com/b2876dce85.js" crossorigin="anonymous"></script>
-    
+
 </head>
 <body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
 
-    <header class="header container">
-        <div class="header__left">
-            <div class="header__hamburger">
-                <i class="fa-solid fa-bars fa-2xl">
-                </i>
-            </div>
-            
-        </div>
-            
-        <div class="header__center">
-            <div class="header__logo">
-                <img class="header__logo" src="images/src/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" width=75px>
-            </div>
-            <div class="header__title">
-                <div class="titleLarge">Bloom Valley Nursery</div>
-            </div>
-        </div>
+    
+    
+    <!-- Page content -->
 
-        <div class="header__right">
-            <div class="header__search">
-                <i class="fa-solid fa-magnifying-glass fa-xl"></i>
-            </div>
-            <div>
-                <input type="text" placeholder="Search">
-            </div>
-            <div class="header__shoppingcart">
-                <i class="fa-solid fa-cart-shopping fa-xl"></i>
-            </div>
-            <div class="header__account">
-                <i class="fa-solid fa-user fa-xl"></i>
-            </div>
-        </div>
-    </header>
 
-    <!-- <main>
-        <div class="title">Welcome to Bloom Valley Nursery!</div>
-        <div class="body">We have all the plants you could ever need here at Bloom Valley Nursery.</div>
-    </main>
-
-    <footer>
-        <p>&copy; 2024. Bloom Valley Nursery. All rights reserved.</p>
-    </footer> -->
+    
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
 
 </body>
 </html>

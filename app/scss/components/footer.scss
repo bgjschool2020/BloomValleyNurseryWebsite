@@ -1,0 +1,12 @@
+@use '../util' as *;
+
+.footer {
+  background-color: var(--sky-bloom);
+  
+  
+  &__logo {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+}

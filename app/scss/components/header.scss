@@ -22,19 +22,23 @@
     padding: rem(10) 0;
   }
 
+  // header__left
   &__hamburger {
     display: flex;
     align-items: center;
     margin-left: rem(10);
   }
 
+  // header__center
   &__logo {
     display: flex;
     align-items: center;
     margin: 0 auto;
   }
 
+  // header__right
   &__search,
+  &__searchbar,
   &__shoppingcart,
   &__account {
     display: flex;
@@ -43,6 +47,20 @@
     flex-shrink: 0;
     width: auto;
     margin-right: rem(10);
+  }
+
+  &__search {
+    margin-right: rem(2);
+  }
+
+  input[type="text"] {
+    padding-left: rem(10);
+    box-sizing: border-box;
+    border: 0 solid var(--sky-bloom);
+    height: rem(30);
+    border-radius: rem(15);
+    color: var(--canopy-green);
+    background-color: var(--meadow-mist);
   }
 
   // Hide the search bar and profile icon on mobile
