@@ -9,6 +9,11 @@ html {
   box-sizing: inherit;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   display: flex;
   flex-direction: column;

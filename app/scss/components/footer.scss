@@ -1,27 +1,71 @@
-@use '../util' as *;
+@use "../util" as *;
 
 .footer {
-  background-color: var(--sky-bloom);
-  color: var(--canopy-green);
-  padding: 15px 0;
-  margin-top: rem(24);
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-
-  &__logo {
+    background-color: var(--sky-bloom);
+    color: var(--canopy-green);
+    padding: 15px 0;
+    position: absolute; // uncomment to place footer at the bottom
     display: flex;
+    justify-content: space-around;
+    width: 100%;
     align-items: center;
-    margin: 0 auto;
-  }
 
-  &__title {
-    margin-top: rem(10);
-  }
+    // for screens larger than medium
+    @include breakpoint(medium) {
+        justify-content: space-between;
+        align-items: center;
+    }
 
-  &__copywrite {
-    margin-top: rem(10);
-  }
+    // for mobile screens
+    @include breakpoint-down(small) {
+        padding: rem(10) 0;
+    }
+
+    &__logo {
+        margin: 0 auto;
+    }
+
+    &__title {
+        margin-top: rem(10);
+    }
+
+    &__copywrite {
+        margin-bottom: rem(10);
+
+        p {
+            display: block;
+            text-align: center;
+        }
+    }
+
+    &__first--coDetails {
+        align-items: center;
+        margin-right: rem(25);
+        text-align: center;
+        flex-direction: column;
+    }
+
+    &__second--company {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__third--quickLinks {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__fourth--socials {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__socialsTop {
+        justify-content: space-between;
+        margin-bottom: rem(20);
+    }
+
+    &__socialsBottom {
+        justify-content: space-between;
+    }
 }

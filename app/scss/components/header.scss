@@ -1,10 +1,10 @@
 @use '../util' as *;
 
 .header {
-  background-color: #BDD4DA;
-  color: #014038;
+  background-color: var(--sky-bloom);
+  color: var(--canopy-green);
   padding: 15px 0;
-  margin-top: rem(24);
+  // margin-top: rem(24);
   position: relative;
   display: flex;
   justify-content: space-between;
