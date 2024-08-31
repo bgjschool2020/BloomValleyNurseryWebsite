@@ -1,0 +1,93 @@
+@use '../util' as *;
+
+.homeContent {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
+    // for screens larger than medium
+    @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    &__categories,
+    &__links {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__products,
+    &__reviews {
+        display: flex;
+        flex-wrap: wrap;
+        width: 66%
+    }
+
+    &__stuffBox {
+        margin: rem(15);
+        color: var(--canopy-green); 
+        background-color: var(--cloudy-grey);
+        padding: rem(10);
+        border: rem(0); 
+        border-radius: rem(15);
+        // margin-left: auto;
+        // margin-right: auto;
+    }
+
+    // for mobile screens
+    @include breakpoint-down(small) {
+        
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        
+
+        &__categories,
+        &__products,
+        &__reviews,
+        &__links {
+            display: flex;
+            justify-content: center;
+            margin:0 auto;
+            width: 100%;
+        }
+    }
+}
+
+.category,
+.link {
+    display: block;
+    background-color: var(--meadow-mist);
+    padding: rem(20);
+    margin-top: rem(5);
+    margin-bottom: rem(5);
+    border: rem(3) solid var(--sky-bloom);
+    transition: all 0.5s;
+    border-radius: rem(15);
+    position: center;
+}
+
+.product,
+.review {
+    display: inline-block;
+    margin-bottom: rem(30);
+    background-color: var(--meadow-mist);
+    border: rem(3) solid var(--sky-bloom);
+    padding: rem(10);
+    border-radius: rem(15);
+    width: rem(300);
+    height: rem(350);
+}
+
+.category:hover,
+.product:hover,
+.review:hover,
+.link:hover {
+    background-color: var(--sky-bloom);
+    color: var(--canopy-green);
+    border-color: var(--sunlit-petal);
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    transform: scale(1.01);
+    transition: all 0.3s ease-out;
+  }

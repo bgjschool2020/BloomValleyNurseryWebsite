@@ -3,69 +3,95 @@
 .footer {
     background-color: var(--sky-bloom);
     color: var(--canopy-green);
-    padding: 15px 0;
-    position: absolute; // uncomment to place footer at the bottom
+    padding: rem(15) rem(100);
+    // position: fixed; // uncomment to place footer at the bottom of the screen not the page
+    // bottom: 0;
     display: flex;
     justify-content: space-around;
     width: 100%;
-    align-items: center;
+    min-height: auto + rem(50);
 
     // for screens larger than medium
     @include breakpoint(medium) {
+        display: flex;
         justify-content: space-between;
         align-items: center;
     }
 
+    p {
+        margin: rem(10) 0 rem(10);
+        text-align: start;
+    }
+
     // for mobile screens
     @include breakpoint-down(small) {
+        flex-direction: column;
         padding: rem(10) 0;
+        align-items: center;
+        text-align: center;
+
+        p {
+            text-align: center;
+        }
     }
+
 
     &__logo {
         margin: 0 auto;
     }
 
     &__title {
-        margin-top: rem(10);
+        margin-top: rem(5);
     }
 
     &__copywrite {
-        margin-bottom: rem(10);
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        padding: rem(20) auto 0;
+        text-align: center;
 
         p {
-            display: block;
-            text-align: center;
+            margin: 0;
         }
     }
 
-    &__first--coDetails {
-        align-items: center;
-        margin-right: rem(25);
-        text-align: center;
-        flex-direction: column;
-    }
-
-    &__second--company {
-        display: flex;
-        flex-direction: column;
-    }
-
-    &__third--quickLinks {
-        display: flex;
-        flex-direction: column;
-    }
-
+    &__first--coDetails,
+    &__second--company,
+    &__third--quickLinks,
     &__fourth--socials {
         display: flex;
         flex-direction: column;
     }
 
     &__socialsTop {
-        justify-content: space-between;
-        margin-bottom: rem(20);
+        //justify-content: space-between;
+        margin-bottom: rem(10);
+        gap: rem(15);
     }
 
     &__socialsBottom {
-        justify-content: space-between;
+        margin-top: rem(10);
+        margin-bottom: rem(40);
+        //justify-content: space-between;
+    }
+
+    &__socialLinks {
+        a:link{
+            color: var(--canopy-green);
+        }
+
+        a:visited {
+            color: var(--canopy-green)
+        }
+
+        a:hover {
+            color: var(--meadow-mist);
+        }
+
+        a:active {
+            color: var(--sunlit-petal);
+        }
     }
 }

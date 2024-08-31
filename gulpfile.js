@@ -14,7 +14,9 @@ const browsersync = require('browser-sync').create();
 // Sass Task
 function scssTask() {
   return src('app/scss/style.scss', { sourcemaps: true })
-    .pipe(sass())
+        .pipe(sass().on('error', (err) => {
+            console.error('Error compiling SCSS:', err.message);
+        }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest('dist', { sourcemaps: '.' }));
 }

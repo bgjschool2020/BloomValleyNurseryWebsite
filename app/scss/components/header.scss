@@ -22,6 +22,8 @@
     padding: rem(10) 0;
   }
 
+
+
   // header__left
   &__hamburger {
     display: flex;
@@ -72,6 +74,12 @@
     }
   }
 
+  &__upper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+  }
 
   // containers for layouts
   &__left {
@@ -94,5 +102,12 @@
     display: flex;
     justify-content: flex-end;
     flex: 1;
+  }
+
+  &__lower {
+    display: block;
+    position: absolute;
+    top: calc(100% - rem(24));
+    width: 100%;
   }
 }
