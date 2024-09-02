@@ -1,113 +1,131 @@
-@use '../util' as *;
+@use "../util" as *;
 
 .header {
-  background-color: var(--sky-bloom);
-  color: var(--canopy-green);
-  padding: 15px 0;
-  // margin-top: rem(24);
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  // for screens larger than medium
-  @include breakpoint(medium) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  // for mobile screens
-  @include breakpoint-down(small) {
-    padding: rem(10) 0;
-  }
-
-
-
-  // header__left
-  &__hamburger {
-    display: flex;
-    align-items: center;
-    margin-left: rem(10);
-  }
-
-  // header__center
-  &__logo {
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  // header__right
-  &__search,
-  &__searchbar,
-  &__shoppingcart,
-  &__account {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    width: auto;
-    margin-right: rem(10);
-  }
-
-  &__search {
-    margin-right: rem(2);
-  }
-
-  input[type="text"] {
-    padding-left: rem(10);
-    box-sizing: border-box;
-    border: 0 solid var(--sky-bloom);
-    height: rem(30);
-    border-radius: rem(15);
+    background-color: var(--sky-bloom);
     color: var(--canopy-green);
-    background-color: var(--meadow-mist);
-  }
-
-  // Hide the search bar and profile icon on mobile
-  @include breakpoint-down(small) {
-
-    input[type="text"],
-    .header__account {
-      display: none;
-    }
-  }
-
-  &__upper {
+    padding: 15px 0;
+    // margin-top: rem(24);
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width:100%;
-  }
 
-  // containers for layouts
-  &__left {
-    display: flex;
-    justify-content: flex-start;
-    flex: 1;
-  }
 
-  &__center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: rem(10);
-    margin: 0 auto;
-    text-align: center;
-    position: center;
-  }
+    // header__left
+    &__hamburger {
+        display: flex;
+        align-items: center;
+        margin-left: rem(10);
+    }
 
-  &__right {
-    display: flex;
-    justify-content: flex-end;
-    flex: 1;
-  }
+    // header__center
+    &__logo {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+    }
 
-  &__lower {
-    display: block;
-    position: absolute;
-    top: calc(100% - rem(24));
-    width: 100%;
-  }
+    // header__right
+    &__search,
+    &__searchbar,
+    &__shoppingcart,
+    &__account {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        width: auto;
+        margin-right: rem(10);
+    }
+
+    &__search {
+        margin-right: rem(2);
+    }
+
+    input[type="text"] {
+        padding-left: rem(10);
+        box-sizing: border-box;
+        border: 0 solid var(--sky-bloom);
+        height: rem(30);
+        border-radius: rem(15);
+        color: var(--canopy-green);
+        background-color: var(--meadow-mist);
+    }
+
+
+    &__upper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: rem(50);
+    }
+
+    // containers for layouts
+    &__left {
+        display: flex;
+        justify-content: flex-start;
+        flex: 1;
+    }
+
+    &__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: rem(10);
+        margin: 0 auto;
+        text-align: center;
+        position: center;
+    }
+
+    &__right {
+        display: flex;
+        justify-content: flex-end;
+        flex: 1;
+    }
+
+    &__lower {
+        position: absolute;
+        padding: rem(20);
+        left: 0;
+        right: 0; /* makes the nav full-width */
+        bottom: 0; /* positions the nav at the bottom of the header */
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        li {
+            padding: 0 rem(30);
+        }
+
+        a {
+            color: var(--canopy-green);
+            text-decoration: none;
+        }
+    }
+
+    // for screens larger than medium
+    @include breakpoint(medium) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    // Hide the search bar and profile icon on mobile
+    @include breakpoint-down(small) {
+        padding: rem(10) 0;
+
+        input[type="text"],
+        &__lower,
+        &__account {
+            display: none;
+        }
+    }
 }

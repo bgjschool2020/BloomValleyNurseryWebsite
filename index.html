@@ -20,12 +20,18 @@
 
     
     <main>
-        <h1 class="title" id="welcome">Welcome to Bloom Valley Nursery!</h1>
-        <img src="images/src/Client1_AppleTree.png" style="width: 100%; height: auto; margin: 0 auto; display: block;" alt="Close up of an apple in an apple tree">
+         <h1 class="title" id="welcome">Welcome to Bloom Valley Nursery!</h1>
+         <style type="text/css">
+             #welcome {
+                 text-align: center;
+                 padding: 16px;
+             }
+         </style>
+        <img src="images/src/Client1_AppleTree-Cropped.png" style="width: 100%; height: auto; margin: 0 auto; display: block;" alt="Close up of an apple in an apple tree">
         <div class="homeContent">
-            <div class="homeContent__categories">
+            <section class="homeContent__categories">
                 <div class="homeContent__stuffBox">
-                    <h2 class="title">Categories</h2>
+                    <h2 class="bodyLarge">Categories</h2>
                     <a href="#category1" class="category bodyStrong">Category 1</a>
                     <a href="#category2" class="category bodyStrong">Category 2</a>
                     <a href="#category3" class="category bodyStrong">Category 3</a>
@@ -34,27 +40,39 @@
                     <a href="#category6" class="category bodyStrong">Category 6</a>
                     <a href="#category7" class="category bodyStrong">Category 7</a>
                     <a href="#category8" class="category bodyStrong">Category 8</a>
-                </div> 
-            </div>
-            <div class="homeContent__products">
-                <div class="homeContent__stuffBox">
-                    <h2 class="bodyLarge" style="width:100%">Featured Products</h2>
-                    <a href="#product1" class="product bodyStrong">Product 1</a>
-                    <a href="#product2" class="product bodyStrong">Product 2</a>
-                    <a href="#product3" class="product bodyStrong">Product 3</a>
-                    <a href="#product4" class="product bodyStrong">Product 4</a>
-                    <a href="#product5" class="product bodyStrong">Product 5</a>
-                    <a href="#product6" class="product bodyStrong">Product 6</a>
                 </div>
-            </div>
-            <div class="homeContent__links">
+            </section> 
+            <section class="homeContent__center">
+                <section class="homeContent__products">
+                    <div class="homeContent__stuffBox">
+                        <h2 class="bodyLarge" style="width:100%">Featured Products</h2>
+                        <a href="#product1" class="product bodyStrong">Product 1</a>
+                        <a href="#product2" class="product bodyStrong">Product 2</a>
+                        <a href="#product3" class="product bodyStrong">Product 3</a>
+                        <a href="#product4" class="product bodyStrong">Product 4</a>
+                        <a href="#product5" class="product bodyStrong">Product 5</a>
+                        <a href="#product6" class="product bodyStrong">Product 6</a>
+                    </div>
+                </section>
+                <section class="homeContent__reviews">
+                    <div class="homeContent__stuffBox">
+                        <h2 class="bodyLarge" style="width:100%">Reviews</h2>
+                        <a href="#review1" class="review bodyStrong">Review 1</a>
+                        <a href="#review2" class="review bodyStrong">Review 2</a>
+                        <a href="#review3" class="review bodyStrong">Review 3</a>
+                        <a href="#review4" class="review bodyStrong">Review 4</a>
+                    </div>
+                </section>
+            </section>
+            <section class="homeContent__links">
                 <div class="homeContent__stuffBox">
                     <h2 class="bodyLarge">Special Links</h2>
-                    <a href="#link1" class="link bodyStrong">Contact Us!</a>
-                    <a href="#link2" class="link bodyStrong">Reviews</a>
-                    <a href="#link3" class="link bodyStrong">Shop Now!</a>
+                    <a href="/index.html" class="link bodyStrong">Home</a>
+                    <a href="/shop.html" class="link bodyStrong">Shop</a>
+                    <a href="/aboutus.html" class="link bodyStrong">About Us</a>
+                    <a href="/reviews.html" class="link bodyStrong">Reviews</a>
                 </div>
-            </div>
+            </section>
         </div>
     </main>
 

@@ -1,4 +1,4 @@
-@use '../util' as *;
+@use "../util" as *;
 
 .homeContent {
     display: flex;
@@ -17,19 +17,29 @@
         flex-direction: column;
     }
 
+    &__center {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 66%;
+        margin: 0;
+    }
+
     &__products,
     &__reviews {
         display: flex;
         flex-wrap: wrap;
-        width: 66%
+        padding: auto;
+        width: 100%;
+        margin: 0 auto;
     }
 
     &__stuffBox {
-        margin: rem(15);
-        color: var(--canopy-green); 
+        margin: rem(16) auto;
+        color: var(--canopy-green);
         background-color: var(--cloudy-grey);
         padding: rem(10);
-        border: rem(0); 
+        border: rem(0);
         border-radius: rem(15);
         // margin-left: auto;
         // margin-right: auto;
@@ -37,20 +47,30 @@
 
     // for mobile screens
     @include breakpoint-down(small) {
-        
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
-        
+
+
+
+        &__center {
+            width: 100%;
+            max-width: 100%;
+        }
 
         &__categories,
         &__products,
         &__reviews,
         &__links {
             display: flex;
-            justify-content: center;
-            margin:0 auto;
+            margin: 0 auto;
             width: 100%;
+            justify-content: center;
+        }
+
+        &__stuffBox {
+            margin: rem(24) auto;
+            width:95%;
         }
     }
 }
@@ -68,7 +88,7 @@
     position: center;
 }
 
-.product,
+.product, 
 .review {
     display: inline-block;
     margin-bottom: rem(30);
@@ -80,6 +100,10 @@
     height: rem(350);
 }
 
+.review {
+    height: rem(75);
+}
+
 .category:hover,
 .product:hover,
 .review:hover,
@@ -87,7 +111,7 @@
     background-color: var(--sky-bloom);
     color: var(--canopy-green);
     border-color: var(--sunlit-petal);
-    box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
     transform: scale(1.01);
-    transition: all 0.3s ease-out;
-  }
+    transition: all 0.5s ease-out;
+}
