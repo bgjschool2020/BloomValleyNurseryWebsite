@@ -45,6 +45,10 @@
         // margin-right: auto;
     }
 
+    &__image{
+        border-radius: rem(30);
+    }
+
     // for mobile screens
     @include breakpoint-down(small) {
         display: flex;

@@ -66,6 +66,7 @@
         display: flex;
         justify-content: flex-start;
         flex: 1;
+        margin-right: calc(rem(110)-rem(46.55));
     }
 
     &__center {
@@ -121,6 +122,7 @@
     // Hide the search bar and profile icon on mobile
     @include breakpoint-down(small) {
         padding: rem(10) 0;
+        
 
         input[type="text"],
         &__lower,

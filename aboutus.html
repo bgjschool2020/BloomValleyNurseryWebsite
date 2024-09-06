@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Valley Nursery: Homepage</title>
+
+    <link rel="stylesheet" href="/dist/style.css">
+    <script defer src="/dist/script.js"></script>
+    <script src="https://kit.fontawesome.com/b2876dce85.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div id="header"></div>
+    <script>
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('header').innerHTML = data);
+    </script>
+
+    
+    <main class="aboutus">
+        <div>
+            <section class="aboutus__stuffBox">
+                <h1 class="aboutus__title title">About Us</h1>
+                <img src="images/src/Client1_WateringCan.png" alt="Watering Can" class="aboutus__image" width="961px" height="auto">
+                <p class="body">
+                    &emsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien fringilla, mattis ligula consectetur, ultrices mauris. Maecenas vitae mattis tellus. Nullam quis imperdiet augue. Vestibulum auctor ornare leo, non suscipit magna interdum eu. Curabitur pellentesque nibh nibh, at maximus ante fermentum sit amet. Pellentesque commodo lacus at sodales sodales. Quisque sagittis orci ut diam condimentum, vel euismod erat placerat. In iaculis arcu eros, eget tempus orci facilisis id.
+                </p>
+            </section>
+            
+            <section class="aboutus__stuffBox">
+                <h1 class="aboutus__ourLocation title">Our Location</h1>
+                <img src="images/src/Client1_PottingSoil.png" alt="Watering Can" class="aboutus__image" width="961px" height="auto"">
+                <div class="googlemap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1152.520016193992!2d-112.02482970927717!3d41.476802258945945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87537a9939f92111%3A0xc375f92565470dc4!2sAlpine%20Gardens!5e0!3m2!1sen!2sus!4v1725322677819!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+                </div>
+            </section>
+            
+            <section class="aboutus__stuffBox">
+                <h1 class="aboutus__contactUs title">Contact Us</h1>
+                <form class="aboutus__formBox">
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email"><br>
+                    <label for="phone">Phone:</label><br>
+                    <input type="text" id="phone" name="phone"><br><br>
+                    <label for="message">What can we help you with?</label><br>
+                    <textarea id="message" class="aboutus__message" name="message" rows="10" cols="50"></textarea><br><br>
+                    <input type="submit" value="Submit">
+                  </form> 
+            </section>
+        </div>
+        
+    </main>
+
+    
+    <div id="footer"></div>
+    <script>
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => document.getElementById('footer').innerHTML = data);
+    </script>
+
+</body>
+</html>
