@@ -40,7 +40,7 @@
         background-color: var(--cloudy-grey);
         padding: rem(10);
         border: rem(0);
-        border-radius: rem(15);
+        border-radius: rem(16);
         // margin-left: auto;
         // margin-right: auto;
     }
@@ -49,15 +49,72 @@
         border-radius: rem(30);
     }
 
+    &__featured-products {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(20);
+        
+    }
+
+    &__product-card {
+        border-radius: rem(16);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        background-color: var(--meadow-mist);
+
+        &:hover {
+            transform: translateY(-5px);
+        }
+
+        &__image {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            // max-width: rem(300);
+
+            img {
+                width: 100%;
+                height: auto;
+                
+                object-fit: cover;
+            }
+        }
+
+        &__details {
+            // display: flex;
+            // flex-direction: column;
+            // align-items: stretch;
+            padding: 15px;
+            background-color: var(--meadow-mist);
+
+            
+        }
+
+        &__title {
+            margin: 10px 0 5px;
+            color: var(--canopy-green);
+        }
+
+        &__price {
+            color: var(--canopy-green)
+
+        }
+    }
+
     // for mobile screens
     @include breakpoint-down(small) {
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
 
-
+        &__featured-products {
+            padding: rem(8);
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         &__center {
+            padding: rem(0);
             width: 100%;
             max-width: 100%;
         }
@@ -76,6 +133,10 @@
             margin: rem(24) auto;
             width:95%;
         }
+
+        &__image {
+            border-radius: rem(16);
+        }
     }
 }
 
@@ -88,7 +149,7 @@
     margin-bottom: rem(5);
     border: rem(3) solid var(--sky-bloom);
     transition: all 0.5s;
-    border-radius: rem(15);
+    border-radius: rem(16);
     position: center;
 }
 
@@ -99,7 +160,7 @@
     background-color: var(--meadow-mist);
     border: rem(3) solid var(--sky-bloom);
     padding: rem(10);
-    border-radius: rem(15);
+    border-radius: rem(16);
     width: rem(300);
     height: rem(350);
 }
@@ -119,3 +180,4 @@
     transform: scale(1.01);
     transition: all 0.5s ease-out;
 }
+
