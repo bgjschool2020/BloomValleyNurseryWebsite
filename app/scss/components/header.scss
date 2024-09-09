@@ -10,12 +10,13 @@
     justify-content: space-between;
     align-items: center;
 
+    a {
+        color: var(--canopy-green);
+    }
 
     // header__left
     &__hamburger {
-        display: flex;
-        align-items: center;
-        margin-left: rem(10);
+        display: none;
     }
 
     // header__center
@@ -110,6 +111,29 @@
             color: var(--canopy-green);
             text-decoration: none;
         }
+    
+    }
+
+    &__responsive {
+        display: none; // Hide mobile navigation by default
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--meadow-mist);
+        padding: rem(20);
+        position: absolute;
+        top: 100%; // Position the menu just below the header
+        width: 100%;
+        z-index: 999;
+
+        a {
+            display: block;
+            width: 100%; // Links will take full width
+            padding: rem(10);
+            text-align: center; // Center the link text
+            color: var(--canopy-green);
+            text-decoration: none;
+        }
     }
 
     // for screens larger than medium
@@ -117,12 +141,36 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        &__responsive {
+            display: none; // Ensure mobile menu is hidden on larger screens
+        }
+
+        &__hamburger {
+            display: none; // Hide hamburger icon on larger screens
+        }
+
+        &__lower {
+            display: flex; // Show the desktop navigation
+        }
     }
 
     // Hide the search bar and profile icon on mobile
     @include breakpoint-down(small) {
         padding: rem(10) 0;
-        
+
+        &__upper {
+            margin-bottom: rem(0);
+        }
+
+        &__lower {
+            display: none;
+        }
+
+        &__hamburger {
+            display: flex;
+            cursor: pointer;
+        }
 
         input[type="text"],
         &__lower,

@@ -28,6 +28,8 @@
         // padding-left: rem(10);
         margin: rem(0) auto rem(16);
         border: 0 solid var(--sky-bloom);
+
+        padding: 0 rem(16);
         height: rem(30);
         width: 50%;
         min-width: 300px;
@@ -37,20 +39,13 @@
     }
 
     &__message {
-        padding-left: rem(10);
+        padding: rem(16);
         border: 0 solid var(--sky-bloom);
         width: 50%;
         min-width: 300px;
         border-radius: rem(15);
         color: var(--canopy-green);
         background-color: var(--meadow-mist);
-    }
-
-    @include breakpoint-down(small) {
-        &__stuffBox {
-
-        }
-    
     }
 }
 

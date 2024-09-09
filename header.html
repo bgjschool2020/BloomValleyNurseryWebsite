@@ -2,15 +2,21 @@
     <div class="header__upper">
         <div class="header__left">
             <div class="header__hamburger">
-                <i class="fa-solid fa-bars fa-2xl">
-                </i>
+                <a href="javascript:void(0);" onClick="openMenu()">
+                    <i class="fa-solid fa-bars fa-2xl"></i>
+                </a>
             </div>
-
         </div>
 
         <div class="header__center">
             <div class="header__logo">
-                <img class="header__logo" src="images/src/Client1_LogoPalette2_F0C06D.png" alt="Bloom Valley Nursery Logo" width=75px height="75px">
+                <img
+                    class="header__logo"
+                    src="images/src/Client1_LogoPalette2_F0C06D.png"
+                    alt="Bloom Valley Nursery Logo"
+                    width="75px"
+                    height="75px"
+                />
             </div>
             <div class="header__title">
                 <div class="titleLarge">Bloom Valley Nursery</div>
@@ -22,7 +28,7 @@
                 <i class="fa-solid fa-magnifying-glass fa-xl"></i>
             </div>
             <div class="header__searchbar">
-                <input type="text" placeholder="Search">
+                <input type="text" placeholder="Search" />
             </div>
             <div class="header__shoppingcart">
                 <i class="fa-solid fa-cart-shopping fa-xl"></i>
@@ -32,12 +38,20 @@
             </div>
         </div>
     </div>
-    <nav class="header__lower bodyLarge" role="navigation">
+    <nav id="myLinks" class="header__lower bodyLarge" role="navigation">
         <ul>
             <li><a href="/index.html">Home</a></li>
             <li><a href="/shop.html">Shop</a></li>
             <li><a href="/aboutus.html">About Us</a></li>
             <li><a href="/reviews.html">Reviews</a></li>
         </ul>
+    </nav>
+
+    <nav class="header__responsive" id="mobileHeader">
+        <a href="/index.html">Home</a>
+        <a href="/shop.html">Shop</a>
+        <a href="/aboutus.html">About Us</a>
+        <a href="/reviews.html">Reviews</a>
+        <a href="javascript:void(0);">Account</a>
     </nav>
 </header>

@@ -9,7 +9,7 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
-    min-height: auto + rem(50);
+    // min-height: auto + rem(50);
 
     // for screens larger than medium
     @include breakpoint(medium) {
