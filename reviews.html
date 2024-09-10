@@ -17,16 +17,59 @@
             .then(response => response.text())
             .then(data => document.getElementById('header').innerHTML = data);
     </script>
-
-    
     
     <!-- Page content -->
     <main>
-        <h1 class="title">Reviews</h1>
-
+        <h1 id="reviews_title" class="title" style="padding: 20px; text-align: center;">Reviews</h1>
+    
+        <div class="reviews__grid container">
+            <div id="reviews_image1" class="reviews__item reviews__image">
+                <img src="/images/src/Client1_BirchTree.png">
+            </div>
+            <div id="reviews_review1" class="reviews__item reviews__review">
+                <p class="bodyLarge">Poppy Seedling</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Such a great place! Tons of shrubs, trees, and bushes here to choose from. A great selection of annuals and perrenials. The fruit and veg selection was adequate also.</p>
+            </div>
+    
+            <div id="reviews_image2" class="reviews__item reviews__image">
+                <img src="/images/src/Client1_AloePlant.png">
+            </div>
+            <div id="reviews_review2" class="reviews__item reviews__review">
+                <p class="bodyLarge">Lily Bloomfield</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Great nursery, and very nice owner! My wife and I love to come here regularly to see all the plants and flowers. The displays are always good, with plants and flowers well stocked. The owner is willing to take time out of his day to answer all of our questions and give excellent tips for our garden to look it's best. Overall, we get very personalized treatment and the selection of plants is outstanding. We recommend this nursery to anyone who is looking for high quality plants or trees with great service. Thank you! 😊</p>
+            </div>
+    
+            <div id="reviews_image3" class="reviews__item reviews__image">
+                <img src="/images/src/Client1_MapleTree.png">
+            </div>
+            <div id="reviews_review3" class="reviews__item reviews__review">
+                <p class="bodyLarge">Rose Petalton</p>
+                <div class="star-rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <p>Great selection and prices! Plus, everyone was super friendly and willing to help! My new favorite nursery!</p>
+            </div>
+        </div>
     </main>
 
-    
     <div id="footer"></div>
     <script>
         fetch('footer.html')

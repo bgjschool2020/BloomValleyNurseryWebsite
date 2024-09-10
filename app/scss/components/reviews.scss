@@ -1,0 +1,60 @@
+@use "../util" as *;
+
+.reviews {
+    margin: auto;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px; 
+        
+        
+    }
+
+    &__item {
+        border-radius: 10px;
+    margin: 0 0 auto;
+    }
+
+    &__image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    &__review {
+        border: var(--sunlit-petal) 3px solid;
+        background-color: var(--meadow-mist);
+        color: var(--canopy-green);
+        padding: 8px;
+        
+        .bodyLarge {
+            margin: 0;
+        }
+
+        .star-rating {
+            display: inline-block;
+            i {
+                color: var(--sunlit-petal);
+                font-size: 24px;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    @include breakpoint-down(small) {
+        &__grid {
+            display: flex;
+            flex-direction: column;
+            #reviews_image1 { order: 1; }
+            #reviews_review1 { order: 2; }
+            #reviews_image2 { order: 3; }
+            #reviews_review2 { order: 4; }
+            #reviews_image3 { order: 5; }
+            #reviews_review3 { order: 6; }
+            padding: rem(8);
+        }
+    }
+}
