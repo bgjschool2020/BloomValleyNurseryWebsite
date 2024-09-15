@@ -4,7 +4,7 @@
     justify-content: center;
     text-align: center;
 
-    &__image{
+    &__image {
         border-radius: rem(50);
         max-width: 100%;
     }
@@ -13,7 +13,7 @@
         margin: rem(16) auto;
         padding: rem(16);
         color: var(--canopy-green);
-        background-color: var(--cloudy-grey);
+        background-color: var(--meadow-mist);
         border: rem(0);
         border-radius: rem(15);
         width: 95%;
@@ -24,7 +24,8 @@
     }
 
     input[type="text"],
-    input[type="submit"] {
+    input[type="submit"],
+    button {
         // padding-left: rem(10);
         margin: rem(0) auto rem(16);
         border: 0 solid var(--sky-bloom);
@@ -35,7 +36,7 @@
         min-width: 250px;
         border-radius: rem(15);
         color: var(--canopy-green);
-        background-color: var(--meadow-mist);
+        background-color: var(--cloudy-grey);
     }
 
     &__message {
@@ -45,10 +46,9 @@
         min-width: 250px;
         border-radius: rem(15);
         color: var(--canopy-green);
-        background-color: var(--meadow-mist);
+        background-color: var(--cloudy-grey);
     }
 }
-
 
 .googlemap {
     padding-bottom: 50%;
@@ -63,3 +63,21 @@
     position: absolute;
 }
 
+// Styles for the form message
+.form-message {
+    margin: rem(16) auto;
+    width: 50%;
+    padding: rem(8);
+    border-radius: rem(20);
+    color: var(--canopy-green);
+    background-color: var(--sky-bloom);
+    display: none;
+}
+
+.form-message.error {
+    background-color: red;
+}
+
+.form-message.success {
+    background-color: var(--sky-bloom);
+}

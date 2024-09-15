@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Bloom Valley Nursery: Homepage</title>
+        <title>Bloom Valley Nursery: Shop</title>
 
         <link rel="stylesheet" href="/dist/style.css" />
         <script defer src="/dist/script.js"></script>
@@ -17,42 +17,77 @@
         <script>
             fetch("header.html")
                 .then((response) => response.text())
-                .then(
-                    (data) =>
-                        (document.getElementById("header").innerHTML = data)
-                );
+                .then((data) => {
+                    document.getElementById("header").innerHTML = data;
+                    // Ensure the script is executed after the footer is loaded
+                    const script = document.createElement("script");
+                    script.src = "/dist/script.js";
+                    document.body.appendChild(script);
+                });
         </script>
 
         <main>
             <!-- Page content -->
-            <h1 id="shop_title" class="title" style="padding: 20px; text-align: center;">Search Results</h1>
+            <h1
+                id="shop_title"
+                class="title"
+                style="padding: 20px; text-align: center"
+            >
+                Search Results
+            </h1>
             <div class="shop">
                 <section class="shop__categories">
                     <div class="homeContent__stuffBox">
                         <h2 class="bodyLarge">Categories</h2>
-                        <a href="#category1" class="category bodyLarge">Trees</a>
-                        <a href="#category2" class="category bodyLarge">Houseplants</a>
-                        <a href="#category3" class="category bodyLarge">Shrubbery</a>
-                        <a href="#category4" class="category bodyLarge">Tools</a>
-                        <a href="#category5" class="category bodyLarge">Decor</a>
+                        <a href="#category1" class="category bodyLarge"
+                            >Trees</a
+                        >
+                        <a href="#category2" class="category bodyLarge"
+                            >Houseplants</a
+                        >
+                        <a href="#category3" class="category bodyLarge"
+                            >Shrubbery</a
+                        >
+                        <a href="#category4" class="category bodyLarge"
+                            >Tools</a
+                        >
+                        <a href="#category5" class="category bodyLarge"
+                            >Decor</a
+                        >
                         <a href="#category6" class="category bodyLarge">Soil</a>
-                        <a href="#category7" class="category bodyLarge">Succulents</a>
-                        <a href="#category8" class="category bodyLarge">Misc.</a>
+                        <a href="#category7" class="category bodyLarge"
+                            >Succulents</a
+                        >
+                        <a href="#category8" class="category bodyLarge"
+                            >Misc.</a
+                        >
                     </div>
                 </section>
 
-                <div class="shop__products container">
+                <section class="shop__products container">
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_AppleTree.png" alt="Apple Tree" />
+                            <img
+                                src="images/src/Client1_AppleTree.png"
+                                alt="Apple Tree"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Apple Tree</h2>
-                                <p class="product-card__price bodyLarge">$99.00</p>
+                                <h2 class="product-card__title title">
+                                    Apple Tree
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $99.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Apple Tree"
+                                    data-price="99.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
@@ -61,15 +96,27 @@
 
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_BirchTree.png" alt="Birch Tree" />
+                            <img
+                                src="images/src/Client1_BirchTree.png"
+                                alt="Birch Tree"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Birch Tree</h2>
-                                <p class="product-card__price bodyLarge">$99.00</p>
+                                <h2 class="product-card__title title">
+                                    Birch Tree
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $99.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Birch Tree"
+                                    data-price="99.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
@@ -78,15 +125,27 @@
 
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_BirdHouse.png" alt="Blue Birdhouse" />
+                            <img
+                                src="images/src/Client1_BirdHouse.png"
+                                alt="Blue Birdhouse"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Birdhouse - Blue</h2>
-                                <p class="product-card__price bodyLarge">$12.00</p>
+                                <h2 class="product-card__title title">
+                                    Birdhouse - Blue
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $12.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Bird House - Blue"
+                                    data-price="12.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
@@ -95,106 +154,179 @@
 
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_MapleTree.png" alt="Maple Tree" />
+                            <img
+                                src="images/src/Client1_MapleTree.png"
+                                alt="Maple Tree"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Maple Tree</h2>
-                                <p class="product-card__price bodyLarge">$99.00</p>
+                                <h2 class="product-card__title title">
+                                    Maple Tree
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $99.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Maple Tree"
+                                    data-price="99.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_PottingSoil.png" alt="Potting Soil" />
+                            <img
+                                src="images/src/Client1_PottingSoil.png"
+                                alt="Potting Soil"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Potting Soil</h2>
-                                <p class="product-card__price bodyLarge">$12.00</p>
+                                <h2 class="product-card__title title">
+                                    Potting Soil
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $12.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Potting Soil"
+                                    data-price="12.00"
+                                    data-quantity="1"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_SpiderPlant.png" alt="Spider Plant" />
+                            <img
+                                src="images/src/Client1_SpiderPlant.png"
+                                alt="Spider Plant"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Spider Plant</h2>
-                                <p class="product-card__price bodyLarge">$17.00</p>
+                                <h2 class="product-card__title title">
+                                    Spider Plant
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $17.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Spider Plant"
+                                    data-price="17.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_StringofPearls.png" alt="String of Pearls" />
+                            <img
+                                src="images/src/Client1_StringofPearls.png"
+                                alt="String of Pearls"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">String of Pearls</h2>
-                                <p class="product-card__price bodyLarge">$24.00</p>
+                                <h2 class="product-card__title title">
+                                    String of Pearls
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $24.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="String of Pearls"
+                                    data-price="24.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_WateringCan.png" alt="Watering Can" />
+                            <img
+                                src="images/src/Client1_WateringCan.png"
+                                alt="Watering Can"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Watering Can</h2>
-                                <p class="product-card__price bodyLarge">$25.00</p>
+                                <h2 class="product-card__title title">
+                                    Watering Can
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $25.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Watering Can"
+                                    data-price="25.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="product-card">
                         <div class="product-card__image">
-                            <img src="images/src/Client1_AloePlant.png" alt="Aloe Plant" />
+                            <img
+                                src="images/src/Client1_AloePlant.png"
+                                alt="Aloe Plant"
+                            />
                         </div>
                         <div class="product-card__details">
                             <div class="product-card__details-left">
-                                <h2 class="product-card__title title">Aloe Plant</h2>
-                                <p class="product-card__price bodyLarge">$17.00</p>
+                                <h2 class="product-card__title title">
+                                    Aloe Plant
+                                </h2>
+                                <p class="product-card__price bodyLarge">
+                                    $17.00
+                                </p>
                             </div>
                             <div class="product-card__details-right">
-                                <a href="javascript:void(0)" class="cart-btn">
+                                <a
+                                    href="javascript:void(0)"
+                                    class="cart-btn"
+                                    data-product="Aloe Plant"
+                                    data-price="17.00"
+                                >
                                     <i class="fa-solid fa-cart-plus fa-2xl"></i>
                                 </a>
                             </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </div>
         </main>
 
@@ -202,10 +334,13 @@
         <script>
             fetch("footer.html")
                 .then((response) => response.text())
-                .then(
-                    (data) =>
-                        (document.getElementById("footer").innerHTML = data)
-                );
+                .then((data) => {
+                    document.getElementById("footer").innerHTML = data;
+                    // Ensure the script is executed after the footer is loaded
+                    const script = document.createElement("script");
+                    script.src = "/dist/script.js";
+                    document.body.appendChild(script);
+                });
         </script>
     </body>
 </html>

@@ -20,6 +20,7 @@
     }
 
     .product-card {
+        position: relative; /* Add this to position the message */
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         overflow: hidden;
@@ -48,7 +49,12 @@
             &-right {
                 display: flex;
                 align-items: center;
+                position: relative; /* Add this to position the message */
             }
+        }
+
+        .cart-btn:hover {
+            color: var(--sunlit-petal);
         }
 
         .cart-btn,
@@ -80,4 +86,80 @@
             margin: 0;
         }
     }
+}
+
+// Styles for the temporary message
+.cart-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--canopy-green);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    z-index: 10;
+    animation: stayAndFade 6s forwards;
+}
+
+@keyframes stayAndFade {
+    0% {
+        opacity: 1;
+    }
+    67% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+// Modal Styles
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: var(--canopy-green-t);
+}
+
+.modal-content {
+    background-color: var(--sky-bloom);
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    border-radius: rem(20);
+
+    &__button {
+        border: var(--meadow-mist) solid rem(2);
+        background-color: var(--meadow-mist);
+        border-radius: rem(10);
+        height: rem(30);
+        padding: 0 rem(15);
+
+        &:hover {
+            background-color: var(--sunlit-petal);
+            text-decoration: none;
+            cursor: pointer;
+        }
+    }
+}
+
+.close {
+    color: var(--canopy-green);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: var(--sunlit-petal);
+    text-decoration: none;
+    cursor: pointer;
 }

@@ -37,6 +37,10 @@
         flex-shrink: 0;
         width: auto;
         margin-right: rem(10);
+
+        i:hover {
+            color: var(--meadow-mist);
+         }
     }
 
     &__search {

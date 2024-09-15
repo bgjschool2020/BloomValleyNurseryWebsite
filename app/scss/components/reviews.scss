@@ -7,7 +7,7 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
-        padding: 20px; 
+        padding: 20px 0px; 
         
         
     }
@@ -48,13 +48,13 @@
         &__grid {
             display: flex;
             flex-direction: column;
+            padding: rem(8);
             #reviews_image1 { order: 1; }
             #reviews_review1 { order: 2; }
             #reviews_image2 { order: 3; }
             #reviews_review2 { order: 4; }
             #reviews_image3 { order: 5; }
             #reviews_review3 { order: 6; }
-            padding: rem(8);
         }
     }
 }

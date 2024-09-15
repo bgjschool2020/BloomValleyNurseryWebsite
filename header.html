@@ -31,7 +31,9 @@
                 <input type="text" placeholder="Search" />
             </div>
             <div class="header__shoppingcart">
-                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <a href="javascript:void(0);" id="viewCart">
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                </a>
             </div>
             <div class="header__account">
                 <i class="fa-solid fa-user fa-xl"></i>
@@ -54,4 +56,19 @@
         <a href="/reviews.html">Reviews</a>
         <a href="javascript:void(0);">Account</a>
     </nav>
+
+    <!-- Modal for View Cart -->
+    <div id="cartModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 class="bodyLarge">Shopping Cart</h2>
+            <ul class="body" id="cartItems"></ul>
+            <button class="modal-content__button bodyStrong" id="processOrder">
+                Process Order
+            </button>
+            <button class="modal-content__button bodyStrong" id="clearCart">
+                Clear Cart
+            </button>
+        </div>
+    </div>
 </header>

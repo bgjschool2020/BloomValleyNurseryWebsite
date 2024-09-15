@@ -1,117 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bloom Valley Nursery: Homepage</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bloom Valley Nursery: Homepage</title>
 
-    <link rel="stylesheet" href="/dist/style.css">
-    <script defer src="/dist/script.js"></script>
-    <script src="https://kit.fontawesome.com/b2876dce85.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="/dist/style.css" />
+        <script defer src="/dist/script.js"></script>
+        <script
+            src="https://kit.fontawesome.com/b2876dce85.js"
+            crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+        <div id="header"></div>
+        <script>
+            fetch("header.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("header").innerHTML = data;
+                    // Ensure the script is executed after the footer is loaded
+                    const script = document.createElement("script");
+                    script.src = "/dist/script.js";
+                    document.body.appendChild(script);
+                });
+        </script>
 
-</head>
-<body>
-    <div id="header"></div>
-    <script>
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('header').innerHTML = data);
-    </script>
-
-    
-    <main>
-         <h1 class="title" id="welcome">Welcome to Bloom Valley Nursery!</h1>
-         <style type="text/css">
-             #welcome, #featured {
-                 text-align: center;
-                 padding: 16px;
-             }
-         </style>
-        <img src="images/src/Client1_AppleTree-Cropped.png" style="width: 957px; height: auto; max-width: 100%; margin: 0 auto; display: block;" class="homeContent__image" alt="Close up of an apple in an apple tree">
-        <div class="homeContent">
-            <section class="homeContent__categories">
-                <div class="homeContent__stuffBox">
-                    <h2 class="bodyLarge">Categories</h2>
-                    <a href="#category1" class="category bodyLarge">Trees</a>
-                    <a href="#category2" class="category bodyLarge">Houseplants</a>
-                    <a href="#category3" class="category bodyLarge">Shrubbery</a>
-                    <a href="#category4" class="category bodyLarge">Tools</a>
-                    <a href="#category5" class="category bodyLarge">Decor</a>
-                    <a href="#category6" class="category bodyLarge">Soil</a>
-                    <a href="#category7" class="category bodyLarge">Succulents</a>
-                    <a href="#category8" class="category bodyLarge">Misc.</a>
-                </div>
-            </section> 
-            <section class="homeContent__center container">
-                <h1 id="featured" class="title">Featured Content</h1>
-                <section class="homeContent__featured-products">
-                    <div class="homeContent__product-card">
-                        <div class="homeContent__product-card__image">
-                            <img src="images/src/Client1_BirchTree.png" alt="Birch Tree" />
-                        </div>
-                        <div class="homeContent__product-card__details">
-                            <h2 class="homeContent__product-card__title title">Birch Tree</h2>
-                            <p class="homeContent__product-card__price bodyLarge">$99.00</p>
-                        </div>
-                    </div>
-                    <div class="homeContent__product-card">
-                        <div class="homeContent__product-card__image">
-                            <img src="images/src/Client1_BirdHouse.png" alt="Blue Birdhouse" />
-                        </div>
-                        <div class="homeContent__product-card__details">
-                            <h2 class="homeContent__product-card__title title">Birdhouse - Blue</h2>
-                            <p class="homeContent__product-card__price bodyLarge">$12.00</p>
-                        </div>
-                    </div>
-                    <div class="homeContent__product-card">
-                        <div class="homeContent__product-card__image">
-                            <img src="images/src/Client1_MapleTree.png" alt="Maple Tree" />
-                        </div>
-                        <div class="homeContent__product-card__details">
-                            <h2 class="homeContent__product-card__title title">Maple Tree</h2>
-                            <p class="homeContent__product-card__price bodyLarge">$99.00</p>
-                        </div>
-                    </div>
-                    <div class="homeContent__product-card">
-                        <div class="homeContent__product-card__image">
-                            <img src="images/src/Client1_WateringCan.png" alt="Apple Tree" />
-                        </div>
-                        <div class="homeContent__product-card__details">
-                            <h2 class="homeContent__product-card__title title">Watering Can</h2>
-                            <p class="homeContent__product-card__price bodyLarge">$25.00</p>
-                        </div>
-                    </div>
-                </section>
-                <section class="homeContent__reviews">
+        <main>
+            <h1 class="title" id="welcome">Welcome to Bloom Valley Nursery!</h1>
+            <style type="text/css">
+                #welcome,
+                #featured,
+                #reviews {
+                    text-align: center;
+                    padding: 16px;
+                    margin: 0 auto;
+                }
+            </style>
+            <img
+                src="images/src/Client1_AppleTree-Cropped.png"
+                style="
+                    width: 957px;
+                    height: auto;
+                    max-width: 100%;
+                    margin: 0 auto;
+                    display: block;
+                "
+                class="homeContent__image"
+                alt="Close up of an apple in an apple tree"
+            />
+            <div class="homeContent">
+                <section class="homeContent__categories">
                     <div class="homeContent__stuffBox">
-                        <h2 class="bodyLarge" style="width:100%">Reviews</h2>
-                        <a href="/reviews.html" class="review bodyStrong">Review 1</a>
-                        <a href="/reviews.html" class="review bodyStrong">Review 2</a>
-                        <a href="/reviews.html" class="review bodyStrong">Review 3</a>
-                        <a href="/reviews.html" class="review bodyStrong">Review 4</a>
+                        <h2 class="bodyLarge">Categories</h2>
+                        <a href="#category1" class="category bodyLarge"
+                            >Trees</a
+                        >
+                        <a href="#category2" class="category bodyLarge"
+                            >Houseplants</a
+                        >
+                        <a href="#category3" class="category bodyLarge"
+                            >Shrubbery</a
+                        >
+                        <a href="#category4" class="category bodyLarge"
+                            >Tools</a
+                        >
+                        <a href="#category5" class="category bodyLarge"
+                            >Decor</a
+                        >
+                        <a href="#category6" class="category bodyLarge">Soil</a>
+                        <a href="#category7" class="category bodyLarge"
+                            >Succulents</a
+                        >
+                        <a href="#category8" class="category bodyLarge"
+                            >Misc.</a
+                        >
                     </div>
                 </section>
-            </section>
-            <section class="homeContent__links">
-                <div class="homeContent__stuffBox">
-                    <h2 class="bodyLarge">Special Links</h2>
-                    <a href="/index.html" class="link bodyLarge">Home</a>
-                    <a href="/shop.html" class="link bodyLarge">Shop</a>
-                    <a href="/aboutus.html" class="link bodyLarge">About Us</a>
-                    <a href="/reviews.html" class="link bodyLarge">Reviews</a>
-                </div>
-            </section>
-        </div>
-    </main>
+                <section class="homeContent__center container">
+                    <h1 id="featured" class="title">Featured Content</h1>
+                    <section class="homeContent__featured-products">
+                        <div class="homeContent__product-card">
+                            <div class="homeContent__product-card__image">
+                                <img
+                                    src="images/src/Client1_BirchTree.png"
+                                    alt="Birch Tree"
+                                />
+                            </div>
+                            <div class="homeContent__product-card__details">
+                                <h2
+                                    class="homeContent__product-card__title title"
+                                >
+                                    Birch Tree
+                                </h2>
+                                <p
+                                    class="homeContent__product-card__price bodyLarge"
+                                >
+                                    $99.00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="homeContent__product-card">
+                            <div class="homeContent__product-card__image">
+                                <img
+                                    src="images/src/Client1_BirdHouse.png"
+                                    alt="Blue Birdhouse"
+                                />
+                            </div>
+                            <div class="homeContent__product-card__details">
+                                <h2
+                                    class="homeContent__product-card__title title"
+                                >
+                                    Birdhouse - Blue
+                                </h2>
+                                <p
+                                    class="homeContent__product-card__price bodyLarge"
+                                >
+                                    $12.00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="homeContent__product-card">
+                            <div class="homeContent__product-card__image">
+                                <img
+                                    src="images/src/Client1_MapleTree.png"
+                                    alt="Maple Tree"
+                                />
+                            </div>
+                            <div class="homeContent__product-card__details">
+                                <h2
+                                    class="homeContent__product-card__title title"
+                                >
+                                    Maple Tree
+                                </h2>
+                                <p
+                                    class="homeContent__product-card__price bodyLarge"
+                                >
+                                    $99.00
+                                </p>
+                            </div>
+                        </div>
+                        <div class="homeContent__product-card">
+                            <div class="homeContent__product-card__image">
+                                <img
+                                    src="images/src/Client1_WateringCan.png"
+                                    alt="Apple Tree"
+                                />
+                            </div>
+                            <div class="homeContent__product-card__details">
+                                <h2
+                                    class="homeContent__product-card__title title"
+                                >
+                                    Watering Can
+                                </h2>
+                                <p
+                                    class="homeContent__product-card__price bodyLarge"
+                                >
+                                    $25.00
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="homeContent__reviews">
+                        <h1 id="reviews" class="title">Reviews</h1>
+                        <div class="reviews__grid container">
+                            <div
+                                id="reviews_review1"
+                                class="reviews__item reviews__review"
+                            >
+                                <p class="bodyLarge">Poppy Seedling</p>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>
+                                    Such a great place! Tons of shrubs, trees,
+                                    and bushes here to choose from. A great
+                                    selection of annuals and perrenials. The
+                                    fruit and veg selection was adequate also.
+                                </p>
+                            </div>
 
+                            <div
+                                id="reviews_review2"
+                                class="reviews__item reviews__review"
+                            >
+                                <p class="bodyLarge">Lily Bloomfield</p>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>
+                                    Great nursery, and very nice owner! My wife
+                                    and I love to come here regularly to see all
+                                    the plants and flowers. The displays are
+                                    always good, with plants and flowers well
+                                    stocked. The owner is willing to take time
+                                    out of his day to answer all of our
+                                    questions and give excellent tips for our
+                                    garden to look it's best. Overall, we get
+                                    very personalized treatment and the
+                                    selection of plants is outstanding. We
+                                    recommend this nursery to anyone who is
+                                    looking for high quality plants or trees
+                                    with great service. Thank you! 😊
+                                </p>
+                            </div>
 
-    
-    <div id="footer"></div>
-    <script>
-        fetch('footer.html')
-            .then(response => response.text())
-            .then(data => document.getElementById('footer').innerHTML = data);
-    </script>
+                            <div
+                                id="reviews_review3"
+                                class="reviews__item reviews__review"
+                            >
+                                <p class="bodyLarge">Rose Petalton</p>
+                                <div class="star-rating">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                </div>
+                                <p>
+                                    Great selection and prices! Plus, everyone
+                                    was super friendly and willing to help! My
+                                    new favorite nursery!
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </section>
+                <section class="homeContent__links">
+                    <div class="homeContent__stuffBox">
+                        <h2 class="bodyLarge">Special Links</h2>
+                        <a href="/index.html" class="link bodyLarge">Home</a>
+                        <a href="/shop.html" class="link bodyLarge">Shop</a>
+                        <a href="/aboutus.html" class="link bodyLarge"
+                            >About Us</a
+                        >
+                        <a href="/reviews.html" class="link bodyLarge"
+                            >Reviews</a
+                        >
+                    </div>
+                </section>
+            </div>
+        </main>
 
-</body>
+        <div id="footer"></div>
+        <script>
+            fetch("footer.html")
+                .then((response) => response.text())
+                .then((data) => {
+                    document.getElementById("footer").innerHTML = data;
+                    // Ensure the script is executed after the footer is loaded
+                    const script = document.createElement("script");
+                    script.src = "/dist/script.js";
+                    document.body.appendChild(script);
+                });
+        </script>
+    </body>
 </html>
