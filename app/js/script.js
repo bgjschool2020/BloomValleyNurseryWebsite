@@ -1,5 +1,6 @@
 /*********************************/
 /************ HEADER *************/
+/*********************************/
 
 function openMenu() {
     const mobileHeader = document.getElementById("mobileHeader");
@@ -43,7 +44,7 @@ window.addEventListener("click", function (event) {
 /*********************************/
 /********** ADD TO CART **********/
 
-let cart = [];
+let cart = JSON.parse(sessionStorage.getItem('cart')) || [];
 
 // Ensure event listeners are only attached once
 if (!window.cartListenersAttached) {
@@ -54,6 +55,7 @@ if (!window.cartListenersAttached) {
                 this.getAttribute("data-price").replace("$", "")
             );
             cart.push({ product, price });
+            sessionStorage.setItem('cart', JSON.stringify(cart)); // Store cart in sessionStorage
 
             // Create and show the temporary message
             const message = document.createElement("div");
@@ -63,7 +65,7 @@ if (!window.cartListenersAttached) {
             )}`;
             this.closest(".product-card").appendChild(message);
 
-            // Remove the message after 4 seconds
+            // Remove the message after 6 seconds
             setTimeout(() => {
                 message.remove();
             }, 6000);
@@ -95,12 +97,14 @@ if (!window.cartListenersAttached) {
         .addEventListener("click", function () {
             alert("Thank you for your order!");
             cart = [];
+            sessionStorage.removeItem('cart'); // Clear cart from sessionStorage
             document.getElementById("cartModal").style.display = "none";
         });
 
     document.getElementById("clearCart").addEventListener("click", function () {
         alert("Cart is cleared!");
         cart = [];
+        sessionStorage.removeItem('cart'); // Clear cart from sessionStorage
         document.getElementById("cartModal").style.display = "none";
     });
 
@@ -128,6 +132,8 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     const message = document.getElementById('message').value.trim();
     const formMessage = document.getElementById('formMessage');
 
+    // console.log(`Name: ${name}, Email: ${email}, Message: ${message}`); // Debugging
+
     if (!name && !email && !message) {
         formMessage.textContent = 'Please enter your name, email, and feedback.';
         formMessage.className = 'form-message error';
@@ -148,6 +154,10 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         formMessage.textContent = `Thank you for your message, ${name}!`;
         formMessage.className = 'form-message success';
         formMessage.style.display = 'block';
+
+        // Store feedback in localStorage
+        const feedback = { name, email, message };
+        localStorage.setItem('feedback', JSON.stringify(feedback));
     }
 });
 
