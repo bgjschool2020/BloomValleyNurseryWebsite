@@ -6,14 +6,14 @@
     &__grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px 0px; 
+        gap: rem(20);
+        padding: rem(20) 0; 
         
         
     }
 
     &__item {
-        border-radius: 10px;
+        border-radius: rem(10);
     margin: 0 0 auto;
     }
 
@@ -21,14 +21,14 @@
         width: 100%;
         height: auto;
         object-fit: cover;
-        border-radius: 10px;
+        border-radius: rem(10);
     }
 
     &__review {
-        border: var(--sunlit-petal) 3px solid;
+        border: var(--sunlit-petal) rem(3) solid;
         background-color: var(--meadow-mist);
         color: var(--canopy-green);
-        padding: 8px;
+        padding: rem(8);
         
         .bodyLarge {
             margin: 0;
@@ -38,8 +38,8 @@
             display: inline-block;
             i {
                 color: var(--sunlit-petal);
-                font-size: 24px;
-                margin-right: 5px;
+                font-size: rem(24);
+                margin-right: rem(5);
             }
         }
     }

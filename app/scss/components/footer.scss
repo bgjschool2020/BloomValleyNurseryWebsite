@@ -136,7 +136,7 @@
 .popup-content {
     background-color: var(--sky-bloom);
     margin: 15% auto;
-    padding: 20px;
+    padding: rem(20);
     width: 50%;
     border-radius: rem(20);
     color: var(--canopy-green);
@@ -152,7 +152,7 @@
 .close {
     color: var(--canopy-green);
     float: right;
-    font-size: 28px;
+    font-size: rem(28);
     font-weight: bold;
 }
 

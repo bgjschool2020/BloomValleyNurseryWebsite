@@ -3,36 +3,36 @@
 :root {
   /* Title Large */
   --font-titleLarge: 'Arial', sans-serif;
-  --size-titleLarge: 30px;
+  --size-titleLarge: 1.875rem;
   --weight-titleLarge: bold;
 
   /* Title */
   --font-title: 'Arial', sans-serif;
-  --size-title: 25px;
-  --weight-title: normal;
+  --size-title: 1.5625rem;
+  --weight-title: bold;
 
   /* Subtitle */
   --font-subtitle: 'Comfortaa', sans-serif;
-  --size-subtitle: 15px;
+  --size-subtitle: 0.9375rem;
   --weight-subtitle: normal;
 
   /* Body Large */
   --font-bodyLarge: 'Calibri', sans-serif;
-  --size-bodyLarge: 20px;
+  --size-bodyLarge: 1.25rem;
   --weight-bodyLarge: normal;
 
   /* Body Strong */
   --font-bodyStrong: 'Calibri', sans-serif;
-  --size-bodyStrong: 16px;
+  --size-bodyStrong: 1rem;
   --weight-bodyStrong: bold;
 
   /* Body */
   --font-body: 'Calibri', sans-serif;
-  --size-body: 16px;
+  --size-body: 1rem;
   --weight-body: normal;
 
   /* Captions */
   --font-captions: 'Arial', sans-serif;
-  --size-captions: 11px;
-  --weight-captions: normal;
+  --size-captions: 0.6875rem;
+  --weight-captions: bold;
 }
