@@ -1,15 +1,14 @@
-run = "vite"
-entrypoint = "index.html"
+run = "npm run dev"
 hidden = [".config"]
-modules = ["nodejs-18", "web"]
+modules = ["web", "nodejs-20"]
 
 [nix]
-channel = "stable-23_05"
+channel = "stable-24_05"
 
 [deployment]
 deploymentTarget = "static"
-build = ["npm", "run", "build"]
 publicDir = "dist"
+run = ["sh", "-c", "npm run dev"]
 
 [[ports]]
 localPort = 3000
